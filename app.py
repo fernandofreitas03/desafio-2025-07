@@ -12,7 +12,7 @@ Endpoints
 
 Exemplo de requisição (curl):
 
-    curl -X POST "http://localhost:8000/format" \
+    curl -X POST "http://localhost:3000/format" \
       -H "Content-Type: application/json" \
       -d '{"text":"Linha de exemplo","width":40,"justify":true}'
 
