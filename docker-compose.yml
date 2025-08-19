@@ -1,0 +1,12 @@
+version: "3.8"
+services:
+  formatter:
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./:/app   # permite editar local e ver as mudanças (útil em dev)
+    environment:
+      - PYTHONUNBUFFERED=1
+    # Para usar reload automático dentro do container, você pode iniciar uvicorn com --reload:
+    command: uvicorn app:app --host 0.0.0.0 --port 3000 --reload
